@@ -1,0 +1,23 @@
+/* Nomor 3: Styling CSS */
+body { font-family: sans-serif; margin: 0; background-color: #f0f2f5; }
+header { background: #1877f2; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+nav ul { list-style: none; display: flex; gap: 15px; }
+nav a { color: white; text-decoration: none; font-weight: bold; }
+
+.container { padding: 20px; min-height: 80vh; }
+.card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+
+form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin-bottom: 20px; }
+input, select { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+button { padding: 10px; background: #42b72a; color: white; border: none; border-radius: 5px; cursor: pointer; }
+
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background: #f4f4f4; }
+
+/* Nomor 8: Responsivitas (Media Query) */
+@media (max-width: 600px) {
+    header { flex-direction: column; }
+    nav ul { padding: 0; margin-top: 10px; }
+    .container { padding: 10px; }
+}
