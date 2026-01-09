@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Web - Tugas Proyek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/40" alt="Logo">
+            <span>WebApp-Priska</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('beranda')">Beranda</a></li>
+                <li><a href="#" onclick="showPage('transaksi')">Transaksi</a></li>
+                <li><a href="#" onclick="showPage('profil')">Profil</a></li>
+                <li><a href="#" onclick="showPage('login')">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="beranda" class="page">
+            <h1>Langkah Menggunakan Aplikasi</h1>
+            <div class="card">
+                <ol>
+                    <li>Klik menu <strong>Login</strong> untuk masuk ke sistem.</li>
+                    <li>Gunakan menu <strong>Transaksi</strong> untuk menginput data baru.</li>
+                    <li>Cek menu <strong>Profil</strong> untuk melihat detail aplikasi.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="transaksi" class="page" style="display:none;">
+            <h2>Input Transaksi Baru</h2>
+            <form id="formTransaksi">
+                <input type="text" id="namaTransaksi" placeholder="Nama Transaksi">
+                <input type="number" id="jumlah" placeholder="Jumlah (Angka)">
+                <select id="kategori">
+                    <option value="">-- Pilih Kategori --</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Transportasi">Transportasi</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+                <button type="submit">Simpan Transaksi</button>
+            </form>
+            <p id="errorMsg" style="color: red;"></p>
+
+            <h3>Daftar Transaksi</h3>
+            <table id="tabelData">
+                <thead>
+                    <tr>
+                        <th>Nama Transaksi</th>
+                        <th>Jumlah</th>
+                        <th>Kategori</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+
+        <section id="profil" class="page" style="display:none;">
+            <h2>Profil Aplikasi</h2>
+            <div class="card">
+                <p>Aplikasi ini dibuat sebagai solusi manajemen data transaksi berbasis web yang sederhana, cepat, dan responsif.</p>
+            </div>
+        </section>
+
+        <section id="login" class="page" style="display:none;">
+            <h2>Login Ke Akun Anda</h2>
+            <form>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="button" onclick="alert('Login Berhasil!')">Masuk</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tugas Web Responsif</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
